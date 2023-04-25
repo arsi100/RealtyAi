@@ -26,7 +26,7 @@ def main():
     return render_template('IndexAppDesign.html', answer=None)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5000, debug=True)
 
     
 
