@@ -5,7 +5,7 @@ from llama_index import GPTSimpleVectorIndex, SimpleDirectoryReader
 
 os.environ['OPENAI_API_KEY'] = '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'
 
-documents = SimpleDirectoryReader('data').load_data()
+documents = SimpleDirectoryReader('RealtyAi/data').load_data()
 index = GPTSimpleVectorIndex.from_documents(documents)
 
 app = Flask(__name__)
@@ -26,7 +26,7 @@ def main():
     return render_template('IndexAppDesign.html', answer=None)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8080)
+    app.run(debug=True)
 
     
 
